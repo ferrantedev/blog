@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Lorenzo Ferrante`s tech blog</title>
+    <link>https://ferrantedev.com/</link>
+    <description>Recent content in Home on Lorenzo Ferrante`s tech blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Apr 2023 15:57:06 +0200</lastBuildDate><atom:link href="https://ferrantedev.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello world!</title>
+      <link>https://ferrantedev.com/posts/hello-world/</link>
+      <pubDate>Thu, 06 Apr 2023 15:57:06 +0200</pubDate>
+      
+      <guid>https://ferrantedev.com/posts/hello-world/</guid>
+      <description>Hello world! A couple of years ago I came to realize that I want to share my software engineering knowledge and perspective with the rest of the world.
+The idea came while working with Keycloak, a awesome product that allows to provide authorization and authentication to a web application I was developing at the time.
+Unfortunately the idea was never executed until now!
+I want to use this blog to regularly post about software products, especially those that are used to build software products.</description>
+    </item>
+    
+  </channel>
+</rss>

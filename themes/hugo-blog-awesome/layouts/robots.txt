@@ -1,0 +1,5 @@
+themes/hugo-blog-awesome/layouts/robots.txt
+User-agent: *
+{{ range .Pages }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
