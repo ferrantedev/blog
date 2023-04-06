@@ -8,9 +8,9 @@ draft: false
 
 A couple of years ago I came to realize that I want to share my software engineering knowledge and perspective with the rest of the world. 
 
-The idea came while working with Keycloak, a awesome product that allows to provide authorization and authentication to a web application I was developing at the time.
+The idea came while working with Keycloak in a hobby project.
 
-Unfortunately the idea was never executed until now!
+Unfortunately the idea was never executed until today!
 
 I want to use this blog to regularly post about software products, especially those that are used to build software products. Such as:
 
@@ -24,4 +24,4 @@ I want to use this blog to regularly post about software products, especially th
 - Kubernetes
 - ArgoCD
 
-And many many more!
+And many many more, stay tuned!
