@@ -15,8 +15,8 @@
       <guid>https://ferrantedev.com/posts/supply-chain-attacks/supply-chain-attacks/</guid>
       <description>What&amp;rsquo;s a Supply Chain Attack? Basically it&amp;rsquo;s when a malicious actor swaps one of the software components with a compromised one.
 Nowadays, the great majority of consumer-facing software, such as webapps or mobile apps, make use of third party software components in the form of libraries.
-For example, this standard app makes use of components such as Searcher, Monitoring, Math, etc.
-These components are created, by third party organizations, often by individuals from the open source community.</description>
+Consider the following image as an example. It depicts a standard app which makes use of components such as Searcher, Monitoring, Math, etc.
+These components are created and maintained, by third party organizations, often by individuals from the open source community.</description>
     </item>
     
     <item>
