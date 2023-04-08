@@ -2,6 +2,7 @@
 title: "What are Supply Chain Attacks and how to mitigate them"
 date: 2023-04-08T15:59:06+02:00
 draft: false
+tags: ['cybersecurity', 'supply chain attack', 'hashing']
 ---
 
 # What's a Supply Chain Attack?
