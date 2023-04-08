@@ -6,7 +6,19 @@
     <description>Recent content in Home on Lorenzo Ferrante`s tech blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Apr 2023 15:57:06 +0200</lastBuildDate><atom:link href="https://ferrantedev.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Apr 2023 15:59:06 +0200</lastBuildDate><atom:link href="https://ferrantedev.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What are Supply Chain Attacks and how to mitigate them</title>
+      <link>https://ferrantedev.com/posts/supply-chain-attacks/supply-chain-attacks/</link>
+      <pubDate>Sat, 08 Apr 2023 15:59:06 +0200</pubDate>
+      
+      <guid>https://ferrantedev.com/posts/supply-chain-attacks/supply-chain-attacks/</guid>
+      <description>What&amp;rsquo;s a Supply Chain Attack? Basically it&amp;rsquo;s when a malicious actor swaps one of the software components with a compromised one.
+Nowadays, the great majority of consumer-facing software, such as webapps or mobile apps, make use of third party software components in the form of libraries.
+For example, this standard app makes use of components such as Searcher, Monitoring, Math, etc.
+These components are created, by third party organizations, often by individuals from the open source community.</description>
+    </item>
+    
     <item>
       <title>Hello world!</title>
       <link>https://ferrantedev.com/posts/hello-world/</link>
@@ -14,9 +26,9 @@
       
       <guid>https://ferrantedev.com/posts/hello-world/</guid>
       <description>Hello world! A couple of years ago I came to realize that I want to share my software engineering knowledge and perspective with the rest of the world.
-The idea came while working with Keycloak, a awesome product that allows to provide authorization and authentication to a web application I was developing at the time.
-Unfortunately the idea was never executed until now!
-I want to use this blog to regularly post about software products, especially those that are used to build software products.</description>
+The idea came while working with Keycloak in a hobby project.
+Unfortunately the idea was never executed until today!
+I want to use this blog to regularly post about software products, especially those that are used to build software products. Such as:</description>
     </item>
     
   </channel>

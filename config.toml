@@ -40,7 +40,7 @@ googleAnalytics = '' # G-MEASUREMENT_ID
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Lorenzo Ferrante's tech blog"
   name = "Lorenzo Ferrante"
-  description = "Welcome! I use this blog to post about software in general. From software product reviews to software development experiments and opinions."
+  description = "Reviews, opinions and comments about anything related to software."
 
 # Enable emojis globally
 enableEmoji = true
