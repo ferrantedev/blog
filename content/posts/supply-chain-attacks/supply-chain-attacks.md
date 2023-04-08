@@ -10,11 +10,12 @@ Basically it's when a malicious actor swaps one of the software components with 
 
 Nowadays, the great majority of consumer-facing software, such as webapps or mobile apps, make use of third party software components in the form of libraries.
 
-For example, this standard app makes use of components such as `Searcher`, `Monitoring`, `Math`, etc.
+Consider the following image as an example. 
+It depicts a standard app which makes use of components such as `Searcher`, `Monitoring`, `Math`, etc.
 
 ![A compromised app](/images/supply-chain-compomised-lib.png)
 
-These components are created, by third party organizations, often by individuals from the open source community. Usually with benevolent intent.
+These components are created and maintained, by third party organizations, often by individuals from the open source community. Usually with benevolent intent.
 
 Once the third party is ready to ship this component, it will upload it to a package manager, where other users will download it.
 
