@@ -61,4 +61,6 @@ Gradual release process, go with Rolling Deployments as they offer a gradual upd
 
 # In summary
 
-Blue-Green Deployments excel in minimizing downtime and risk during releases, Canary Deployments are useful for controlled testing with a subset of users, and Rolling Deployments offer a gradual update process for the entire production environment. The choice among these strategies depends on specific deployment requirements, risk tolerance, and
+Blue-Green Deployments excel in minimizing downtime and risk during releases, Canary Deployments are useful for controlled testing with a subset of users, and Rolling Deployments offer a gradual update process for the entire production environment.
+
+Choose wisely!
