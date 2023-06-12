@@ -4,11 +4,11 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">Tags | Lorenzo Ferrante`s tech blog</title>
-<meta property="og:title" content="Tags | Lorenzo Ferrante`s tech blog" />
-<meta name="twitter:title" content="Tags | Lorenzo Ferrante`s tech blog" />
-<meta itemprop="name" content="Tags | Lorenzo Ferrante`s tech blog" />
-<meta name="application-name" content="Tags | Lorenzo Ferrante`s tech blog" />
+<title itemprop="name">Blue Green vs Canary vs Rolling Deployment | Lorenzo Ferrante`s tech blog</title>
+<meta property="og:title" content="Blue Green vs Canary vs Rolling Deployment | Lorenzo Ferrante`s tech blog" />
+<meta name="twitter:title" content="Blue Green vs Canary vs Rolling Deployment | Lorenzo Ferrante`s tech blog" />
+<meta itemprop="name" content="Blue Green vs Canary vs Rolling Deployment | Lorenzo Ferrante`s tech blog" />
+<meta name="application-name" content="Blue Green vs Canary vs Rolling Deployment | Lorenzo Ferrante`s tech blog" />
 <meta property="og:site_name" content="Lorenzo Ferrante&#39;s tech blog" />
 
 <meta name="description" content="A blog about software in general. From software product reviews to software development experiments and opinions.">
@@ -29,13 +29,49 @@
 
 
 
+    
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2023-06-12T18:00:42&#43;0200 />
+    <meta property="article:published_time" content=2023-06-12T18:00:42&#43;0200 />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Blue Green vs Canary vs Rolling Deployment",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2023-06-12",
+        "description": "",
+        "wordCount":  646 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2023-06-12",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Lorenzo Ferrante`s tech blog"
+        }
+    }
+    </script>
+
   <meta name="generator" content="Hugo 0.111.3">
 
   
 
-  <link rel="canonical" href="https://ferrantedev.com/tags/">
-  <link href="https://ferrantedev.com/tags/index.xml" rel="alternate" type="application/rss+xml" title="Lorenzo Ferrante`s tech blog">
-  <link href="https://ferrantedev.com/tags/index.xml" rel="feed" type="application/rss+xml" title="Lorenzo Ferrante`s tech blog"><link href="/sass/main.min.0eebb6db90b4ec9f4444ef402f08421ee056025ba860df3d749a9f299d472008.css" rel="stylesheet"><link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+  <link rel="canonical" href="https://ferrantedev.com/posts/blue-gree-canary-rolling-deployment/blue-green-vs-canary-vs-rolling-deployment/"><link href="/sass/main.min.0eebb6db90b4ec9f4444ef402f08421ee056025ba860df3d749a9f299d472008.css" rel="stylesheet"><link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
   
 
@@ -87,7 +123,7 @@ stroke-linejoin="round" class="feather feather-home">
         
           <li>
             <a 
-            class="menu-link "
+            class="menu-link active"
             href="/posts/">
             Posts
             </a>
@@ -116,121 +152,67 @@ stroke-linejoin="round" class="feather feather-home">
     </div>
   </nav>
 </div>
-<div class="wrapper list-page">
-    <header class="header">
-        <h1 class="header-title center">Tags</h1>
-    </header>
+
+<div class="wrapper post">
     <main class="page-content" aria-label="Content">
-        
-        
-        <h2 class="post-year">2023</h2>
+        <article>
+            <header class="header">
+                <h1 class="header-title">Blue Green vs Canary vs Rolling Deployment</h1>
+                
+                <div class="post-meta">
+                    <time datetime="2023-06-12T18:00:42&#43;02:00" itemprop="datePublished"> 12 Jun 2023 </time>
+                </div>
+            </header>
+            <div class="page-content">
+                <p>In this post we will compare the most popular deployment strategies, namely:</p>
+<ul>
+<li>Rolling</li>
+<li>Blue-Green</li>
+<li>Canary</li>
+</ul>
+<h1 id="rolling-deployments">Rolling Deployments</h1>
+<p>It&rsquo;s the simplest deployment strategy which involves updating software systems by gradually replacing instances in a rolling fashion. Here&rsquo;s how it generally works:</p>
+<ul>
+<li>The new version of the software is deployed on a subset of instances, while the remaining instances continue to run the previous version.</li>
+<li>Traffic is then gradually shifted from the old instances to the new instances, ensuring a smooth transition.</li>
+<li>Once the new instances are confirmed to be stable, the process continues by updating the remaining instances.</li>
+<li>This sequential update process continues until all instances are running the new version.</li>
+</ul>
+<p>Rolling Deployments allow for a <strong>controlled and incremental update</strong> of the software system, ensuring that a certain portion of the system is always operational. It also provides an opportunity to monitor the impact of the new version on performance and detect any issues early on.</p>
+<h1 id="blue-green-deployments">Blue-Green deployments</h1>
+<p>Briefly, it&rsquo;s a software release strategy that involves maintaining two identical production environments, namely the &ldquo;blue&rdquo; and the &ldquo;green&rdquo; environment. The blue environment represents the current live system, while the green environment represents the updated version that is being deployed. Here&rsquo;s how it works:</p>
+<ul>
+<li>Initially, all user traffic is routed to the blue environment, which is the stable and running production version.</li>
+<li>The updated version of the software is deployed to the green environment, which remains idle during this phase.</li>
+<li>Once the green environment is successfully deployed and tested, the traffic routing is switched from the blue to the green environment, making it the new live system.</li>
+<li>If any issues arise, it&rsquo;s easy to roll back by redirecting the traffic back to the blue environment.</li>
+</ul>
+<p>The key advantages of Blue-Green Deployments include <strong>minimal downtime and reduced risk during software releases</strong>, as the previous version remains intact until the new version is thoroughly tested.</p>
+<h1 id="canary-deployments">Canary Deployments</h1>
+<p>In a nutshell, it&rsquo;s a release strategy that focuses on gradually rolling out new features or updates to a subset of users, allowing for testing and monitoring before a wider release. Here&rsquo;s how it typically works:</p>
+<ul>
+<li>Initially, a small portion of user traffic (canary group) is diverted from the main production environment to the newly deployed version (canary version).</li>
+<li>The canary group represents a small, representative subset of users who are more tolerant of potential issues.</li>
+<li>The behavior and performance of the canary version are closely monitored, collecting metrics and user feedback to assess its stability.</li>
+<li>If the canary version performs well without issues, the deployment can proceed to a broader audience.</li>
+<li>If any problems are detected, the deployment can be halted or rolled back before affecting the majority of users.</li>
+</ul>
+<p>Canary Deployments allow for <strong>controlled testing and gradual rollout</strong> of new features, minimizing the impact of potential issues by targeting a smaller user base initially.</p>
+<h1 id="picking-the-best-strategy">Picking the best strategy</h1>
+<p>Depending on the nature of the application your team may prefer a deployment strategy over the other as each strategy has it&rsquo;s own benefit/drawback.</p>
+<p><strong>Minimal risk and downtime</strong>, go with Blue-Green and Canary Deployments as they both provide a safety net and allow for rollbacks if issues occur.</p>
+<p><strong>Low Maintenance cost</strong>, go with Canary and Rolling Deployments, as they typically work with a single production environment. Blue-Green Deployments involve maintaining two separate environments, which can be expensive.</p>
+<p><strong>Feature testing</strong>, go with Canary Deployments, as they allow to target a subset of users for testing, while Blue-Green and Rolling Deployments involve updating the entire production environment.</p>
+<p><strong>Gradual release process</strong>, go with Rolling Deployments as they offer a gradual update process, whereas Blue-Green and Canary Deployments can involve a switch from one version to another more abruptly.</p>
+<h1 id="in-summary">In summary</h1>
+<p>Blue-Green Deployments excel in minimizing downtime and risk during releases, Canary Deployments are useful for controlled testing with a subset of users, and Rolling Deployments offer a gradual update process for the entire production environment.</p>
+<p>Choose wisely!</p>
 
-        
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="https://ferrantedev.com/tags/rolling/">rolling</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-06-12T18:00:42&#43;0200">
-        12 Jun 2023
-    </time>
-</article>
-
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="https://ferrantedev.com/tags/deployment/">deployment</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-06-12T18:00:42&#43;0200">
-        12 Jun 2023
-    </time>
-</article>
-
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="https://ferrantedev.com/tags/canary/">canary</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-06-12T18:00:42&#43;0200">
-        12 Jun 2023
-    </time>
-</article>
-
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="https://ferrantedev.com/tags/blue-green/">blue-green</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-06-12T18:00:42&#43;0200">
-        12 Jun 2023
-    </time>
-</article>
-
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="https://ferrantedev.com/tags/supply-chain-attack/">supply chain attack</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-04-08T15:59:06&#43;0200">
-        8 Apr 2023
-    </time>
-</article>
-
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="https://ferrantedev.com/tags/hashing/">hashing</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-04-08T15:59:06&#43;0200">
-        8 Apr 2023
-    </time>
-</article>
-
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="https://ferrantedev.com/tags/cybersecurity/">cybersecurity</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-04-08T15:59:06&#43;0200">
-        8 Apr 2023
-    </time>
-</article>
-
-
-         
-
-         
-
+            </div>
+        </article>
     </main>
-</div><footer class="footer">
+</div>
+<footer class="footer">
     <span class="footer_item"> </span>
     &nbsp;
 

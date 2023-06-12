@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rolling on Lorenzo Ferrante`s tech blog</title>
+    <link>https://ferrantedev.com/tags/rolling/</link>
+    <description>Recent content in rolling on Lorenzo Ferrante`s tech blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Jun 2023 18:00:42 +0200</lastBuildDate><atom:link href="https://ferrantedev.com/tags/rolling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blue Green vs Canary vs Rolling Deployment</title>
+      <link>https://ferrantedev.com/posts/blue-gree-canary-rolling-deployment/blue-green-vs-canary-vs-rolling-deployment/</link>
+      <pubDate>Mon, 12 Jun 2023 18:00:42 +0200</pubDate>
+      
+      <guid>https://ferrantedev.com/posts/blue-gree-canary-rolling-deployment/blue-green-vs-canary-vs-rolling-deployment/</guid>
+      <description>In this post we will compare the most popular deployment strategies, namely:
+Rolling Blue-Green Canary Rolling Deployments It&amp;rsquo;s the simplest deployment strategy which involves updating software systems by gradually replacing instances in a rolling fashion. Here&amp;rsquo;s how it generally works:
+The new version of the software is deployed on a subset of instances, while the remaining instances continue to run the previous version. Traffic is then gradually shifted from the old instances to the new instances, ensuring a smooth transition.</description>
+    </item>
+    
+  </channel>
+</rss>
